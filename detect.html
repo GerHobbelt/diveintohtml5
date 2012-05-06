@@ -361,9 +361,9 @@ A: Anyone who has physical access to your computer can probably look at (or even
 
 <h2 id=geolocation>Geolocation</h2>
 
-<p>Geolocation is the art of figuring out where you are in the world and (optionally) sharing that information with people you trust. There is more than one way to figure out where you are &mdash; your <abbr>IP</abbr> address, your wireless network connection, which cell tower your phone is talking to, or dedicated <abbr>GPS</abbr> hardware that calculates latitude and longitude from information sent by satellites in the sky.
+<p class=ss style="width:194px" id=geo-wrapper><img src=i/openclipart.org_johnny_automatic_globe_man.png alt="man with a globe for a head" width=194 height=317><br><span id=live-geolocation></span></p>
 
-<p style="margin:0 auto;width:194px" id=geo-wrapper><img src=i/openclipart.org_johnny_automatic_globe_man.png alt="man with a globe for a head" width=194 height=317><br><span id=live-geolocation></span>
+<p>Geolocation is the art of figuring out where you are in the world and (optionally) sharing that information with people you trust. There is more than one way to figure out where you are &mdash; your <abbr>IP</abbr> address, your wireless network connection, which cell tower your phone is talking to, or dedicated <abbr>GPS</abbr> hardware that calculates latitude and longitude from information sent by satellites in the sky.
 
 <div class="pf clear">
 <h4>Ask Professor Markup</h4>
@@ -375,10 +375,10 @@ A: Geolocation support is being added to browsers right now, along with support 
 </div>
 </div>
 
-<p>Checking for geolocation support uses <a href=#techniques>detection technique #1</a>. If your browser supports the geolocation <abbr>API</abbr>, there will be a <code>geolocation</code> property on the global <code>navigator</code> object. If your browser doesn&#8217;t support the geolocation <abbr>API</abbr>, the <code>geolocation</code> property will be undefined. Here&#8217;s how to check for geolocation support:
+<p>Checking for geolocation support uses <a href=#techniques>detection technique #1</a>. If your browser supports the geolocation <abbr>API</abbr>, there will be a <code>geolocation</code> property on the global <code>navigator</code> object. If your browser doesn&#8217;t support the geolocation <abbr>API</abbr>, the <code>geolocation</code> property will not be present inside of <code>navigator</code>. Here&#8217;s how to check for geolocation support:
 
 <pre><code>function supports_geolocation() {
-  return !!navigator.geolocation;
+  return 'geolocation' in navigator;
 }</code></pre>
 
 <p>Instead of writing this function yourself, you can use <a href=#modernizr>Modernizr</a> to detect support for the geolocation <abbr>API</abbr>.
@@ -447,7 +447,12 @@ A: Geolocation support is being added to browsers right now, along with support 
 
 <h2 id=input-placeholder>Placeholder Text</h2>
 
-<form style="float:right;margin:1.75em"><input placeholder="Your browser supports placeholder text" size=38></form>
+<form>
+<p class=ss style="width:261px"><img src=i/www.tjray.info.Mergenthaler.Ad-probably.a.Model.25.ca.1930.png alt="linotype model 25 - one of the machines that helped create a demand for lorem ipsum placeholder text in exhibiting fonts" width=270 height=316><br>
+<span id=placeholder-text>
+<input placeholder="Your browser supports placeholder text" size=38>
+</span>
+</form>
 
 <p>Besides <a href=#input-types>new input types</a>, <abbr>HTML5</abbr> includes several small tweaks to existing forms. One improvement is the ability to set <a href=http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#the-placeholder-attribute>placeholder text in an input field</a>. Placeholder text is displayed inside the input field as long as the field is empty and not focused. As soon you click on (or tab to) the input field, the placeholder text disappears. The <a href=forms.html#placeholder>chapter on web forms</a> has screenshots if you&#8217;re having trouble visualizing it.
 
@@ -591,7 +596,7 @@ A: Geolocation support is being added to browsers right now, along with support 
 
 <p class=c>Copyright MMIX&ndash;MMXI <a href=about.html>Mark Pilgrim</a>
 
-<form action=http://www.google.com/cse><div><input type=hidden name=cx value=017884302975346027366:bgclqh8nvse><input type=hidden name=ie value=UTF-8><input type=search name=q size=25 placeholder="powered by Google&trade;">&nbsp;<input type=submit name=sa value=Search></div></form>
+<form action=http://www.google.com/cse><div><input type=hidden name=cx value=003903871671957224183:u1ldygxpsdm><input type=hidden name=ie value=UTF-8><input type=search name=q size=25 placeholder="powered by Google&trade;">&nbsp;<input type=submit name=sa value=Search></div></form>
 <script src=j/jquery.js></script>
 <script src=j/modernizr.js></script>
 <script src=j/gears_init.js></script>
